@@ -1,0 +1,38 @@
+#### Preamble ####
+# Purpose: Get data on 2021 homeless shelter usage and make table
+# Author: Rohan Alexander
+# Email: rohan.alexander@utoronto.ca
+# Date: 1 July 2022
+# Prerequisites: -
+
+#### Workspace set-up ####
+```{r}
+library(knitr)
+library(janitor)
+library(lubridate)
+library(tidyverse)
+```
+### Simulate data ###
+```{r}
+set.seed(853)
+
+simulated_height_data <-
+  tibble(
+    name =
+      c(
+        rep("Ash", 4),
+        rep("Jacki", 4),
+        rep("Matt", 4),
+        rep("Mike", 4),
+        rep("Rol", 4)
+      ),
+    height =
+      runif(
+        n = 20,
+        min = 4.0,
+        max = 7.0
+        
+      )
+  )
+head(simulated_height_data)
+```
