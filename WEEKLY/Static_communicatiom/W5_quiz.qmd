@@ -38,7 +38,7 @@ head(simulated_height_data)
 ### Graph the dataframe ###
 ```{r}
 simulated_height_data |>
-  ggplot(mapping = aes(x = name, y = height, color = name)) +
+  ggplot(mapping = aes(x = name, y = height)) +
   geom_point()
 
 ```
