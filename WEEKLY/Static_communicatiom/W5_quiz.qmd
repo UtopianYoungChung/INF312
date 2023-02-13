@@ -1,9 +1,8 @@
 #### Preamble ####
-# Purpose: Get data on 2021 homeless shelter usage and make table
-# Author: Rohan Alexander
-# Email: rohan.alexander@utoronto.ca
-# Date: 1 July 2022
-# Prerequisites: -
+# Purpose: Quiz 5 
+# Author: Joseph Chung
+# Email: yj.chungr@mail.utoronto.ca
+# Date: 13 Feb 2023
 
 #### Workspace set-up ####
 ```{r}
@@ -20,19 +19,26 @@ simulated_height_data <-
   tibble(
     name =
       c(
-        rep("Ash", 4),
-        rep("Jacki", 4),
-        rep("Matt", 4),
-        rep("Mike", 4),
-        rep("Rol", 4)
+        rep("Ash", 20),
+        rep("Jacki", 20),
+        rep("Matt", 20),
+        rep("Mike", 20),
+        rep("Rol", 20)
       ),
     height =
       runif(
-        n = 20,
+        n = 100,
         min = 4.0,
         max = 7.0
         
       )
   )
 head(simulated_height_data)
+```
+### Graph the dataframe ###
+```{r}
+simulated_height_data |>
+  ggplot(mapping = aes(x = name, y = height, color = name)) +
+  geom_point()
+
 ```
